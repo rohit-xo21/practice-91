@@ -14,7 +14,7 @@ const Home = () => {
     const onsubmit = async (e) => {
         e.preventDefault();
         try{
-            const res = await axios.post("http://localhost:5000/api/products/create", {...product});
+            const res = await axios.post(`${import.meta.env.VITE_API_URI}/create`, {...product});
             console.log(res)
         } catch(err) {
             console.log(err);
